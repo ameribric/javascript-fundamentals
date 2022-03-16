@@ -27,9 +27,6 @@ const functionC = () => {
     console.log('FUNCTION C HAS BEEN CALLED!')
 }
 
-const greet = (person) => {
-    console.log('HELLO!!!', person)
-}
 
 
 const blender = (string) => {
