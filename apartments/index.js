@@ -63,6 +63,9 @@ let building = {
         if (apt.tenants.length === apt.bedrooms) {
           return `${apt.unit} is already full`
         }
+        if (this.allowsPets === false && tenant.pet) {
+            return `${apt.unit} is avaliable, but you must give ${tenant.pet} for adoption!`
+        }
         apt.tenants.push(tenant)
         console.log(tenant.name, 'has rented out', apt.unit)
     },
