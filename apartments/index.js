@@ -65,3 +65,6 @@ let building = {
     allowsPets: false,
     apartments: [apt1, apt2, apt3, apt4]
 }
+
+//building.apartments[1].windows
+// use that code above to find the amount of windows in apartment 2. remember the array starts at 0 so thats why apt2 is found using [1]
