@@ -69,6 +69,22 @@ let building = {
         apt.tenants.push(tenant)
         console.log(tenant.name, 'has rented out', apt.unit)
     },
+    occupiedApts: function() {
+    // returns only the apts which have tenants inside of them
+    // condition to test: apt.tenants.length
+    return this.apartments.filter((el) => {
+        return el.tenants.length > 0
+    })
+    },
+    fullApts: function() {
+    // returns only the apt which are completely full
+    // condition to test: apt.tenants.length === apt.bedrooms
+    return this.apartments.filter((el) => {
+        return el.tenants.length === el.bedrooms
+    })
+    
+    },
+    
     apartments: [apt1, apt2, apt3, apt4]
 }
 
