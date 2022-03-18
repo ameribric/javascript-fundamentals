@@ -9,6 +9,9 @@ h1 {
     margin-bottom: 5%;
 }
 
+.transparent {
+    opacity: 0.5;
+}
 
 .container {
     display: flex;

@@ -1,0 +1,26 @@
+/* section {} targets all sections in the file */
+body {
+    font-family: sans-serif;
+}
+
+h2 {
+    font-family: courier;
+}
+
+body > section:nth-child(2) {
+    background-color: firebrick;
+}
+
+section {
+    background-color: pink;
+}
+
+/* this will target every element with is class    class="text"*/
+
+.text {
+    font-size: 2em;
+}
+
+h2[class^="header-"] {
+    text-align: center;
+}
