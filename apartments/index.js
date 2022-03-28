@@ -56,7 +56,7 @@ let tenant2 = {
 
 
 let building = {
-    streetAddress: '140 East 56 Street',
+    streetAddress: '140 East 56',
     laundry: false,
     allowsPets: false,
     lease: function(apt, tenant) {
@@ -85,8 +85,23 @@ let building = {
     
     },
     
-    apartments: [apt1, apt2, apt3, apt4]
+    apartments: [apt1, apt2, apt3]
 }
 
 //building.apartments[1].windows
 // use that code above to find the amount of windows in apartment 2. remember the array starts at 0 so thats why apt2 is found using [1]
+
+const div = document.getElementById('building')
+const render = () => {
+    let h2 = document.createElement('h2')
+    h2.innerText = building.streetAddress
+    div.append(h2)
+    let ul = document.createElement('ul')
+    building.apartments.forEach((element) => {
+        let li = document.createElement('li')
+        li.innerText = element.unit
+        ul.append(li)
+    })
+    div.append(h2, ul)
+}
+render()
